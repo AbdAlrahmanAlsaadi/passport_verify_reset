@@ -14,9 +14,9 @@ return [
     */
 
     'defaults' => [
-    'guard' => 'api', // بدلاً من 'web'
-    'passwords' => 'users',
-],
+        'guard' => 'web',
+        'passwords' => 'users',
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -36,17 +36,11 @@ return [
     */
 
     'guards' => [
-    'web' => [
-        'driver' => 'session',
-        'provider' => 'users',
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
     ],
-
-    'api' => [
-        'driver' => 'passport',  // استخدام passport للدرايفر
-        'provider' => 'users',
-        'hash' => false,  // إذا كنت ترغب في عدم تجزئة التوكن، يمكنك تغييره حسب الحاجة.
-    ],
-],
 
     /*
     |--------------------------------------------------------------------------
